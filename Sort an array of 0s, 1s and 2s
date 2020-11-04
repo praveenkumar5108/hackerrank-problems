@@ -1,0 +1,16 @@
+def sort21(a,arr_size):
+  lo = 0
+  hi = arr_size - 1
+  mid = 0
+  while a[mid] < hi:
+    if a[mid]==0:
+      a[mid], a[lo] = a[lo], a[mid]
+      lo = lo+1
+    elif a[mid] == 1:
+      mid = mid + 1
+    else:
+      a[mid], a[hi] = a[hi],a[mid]
+      hi= hi-1
+def printArray(a):
+  for k in a:
+    print(k)
